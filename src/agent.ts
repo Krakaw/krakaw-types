@@ -64,7 +64,6 @@ export interface RegisterAgentPayload {
 export interface UpdateAgentPayload {
   name?: string;
   status?: AgentStatus;
-  currentTaskId?: string | null;
   workspace?: string;
   host?: string;
   metadata?: Record<string, unknown>;
@@ -79,7 +78,7 @@ export interface LogActivityPayload {
 }
 
 /** Agent cleanup result */
-export interface AgentCleanupResult {
+export interface CleanupResult {
   deleted: number;
   agentIds: string[];
 }

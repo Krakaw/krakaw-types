@@ -2,46 +2,48 @@
   "name": "@krakaw/types",
   "version": "0.1.0",
   "description": "Shared TypeScript types for Krakaw projects",
+  "private": true,
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
+      "types": "./dist/index.d.ts",
       "import": "./dist/index.mjs",
-      "require": "./dist/index.js",
-      "types": "./dist/index.d.ts"
+      "require": "./dist/index.js"
     },
     "./agent": {
+      "types": "./dist/agent.d.ts",
       "import": "./dist/agent.mjs",
-      "require": "./dist/agent.js",
-      "types": "./dist/agent.d.ts"
+      "require": "./dist/agent.js"
     },
     "./kanban": {
+      "types": "./dist/kanban.d.ts",
       "import": "./dist/kanban.mjs",
-      "require": "./dist/kanban.js",
-      "types": "./dist/kanban.d.ts"
+      "require": "./dist/kanban.js"
     },
     "./webhook": {
+      "types": "./dist/webhook.d.ts",
       "import": "./dist/webhook.mjs",
-      "require": "./dist/webhook.js",
-      "types": "./dist/webhook.d.ts"
+      "require": "./dist/webhook.js"
     },
     "./api": {
+      "types": "./dist/api.d.ts",
       "import": "./dist/api.mjs",
-      "require": "./dist/api.js",
-      "types": "./dist/api.d.ts"
+      "require": "./dist/api.js"
     }
   },
   "files": [
     "dist"
   ],
   "scripts": {
-    "build": "tsc",
-    "build:watch": "tsc --watch",
+    "build": "tsup",
+    "build:watch": "tsup --watch",
     "clean": "rm -rf dist",
     "prepublishOnly": "npm run build"
   },
   "devDependencies": {
+    "tsup": "^8.0.0",
     "typescript": "^5.4.0"
   },
   "keywords": [

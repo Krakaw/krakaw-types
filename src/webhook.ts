@@ -48,11 +48,11 @@ export interface Webhook<TEvent extends WebhookEvent = string> {
   secret: string;
   events: TEvent[];
   enabled: boolean;
-  lastDeliveredAt: Date | null;
+  lastDeliveredAt: string | null;
   lastDeliveryStatus: number | null;
-  lastFailedAt: Date | null;
-  createdAt: Date;
-  updatedAt: Date;
+  lastFailedAt: string | null;
+  createdAt: string;
+  updatedAt: string;
 }
 
 /**
